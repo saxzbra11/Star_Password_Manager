@@ -12,7 +12,7 @@ Verranno aggiunti con i prossimi aggiornamenti le seguenti funzioni:
 
 2. **INTERFACCIA GRAFICA (UI) IN TKINTER:** Sono al lavoro per imparare il tkinter così da poterlo applicare in questo programma
 
-3. **VERSIONE INGLESE DEL PROGRAMMA:** Farò una traduzione in ignlese del programma
+3. **VERSIONE INGLESE DEL PROGRAMMA:** Farò una traduzione in inglese del programma
 
 
 Nota: Questa Repo è pubblica,se sei un developer e vuoi collaborare o dare dei consigli sul codice o sullo sviluppo, sarai ben accetto per offrire un aiuto e rendere questo Gestore Password un programma migliore!
