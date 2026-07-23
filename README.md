@@ -22,6 +22,6 @@ Nota: Questa Repo è pubblica,se sei un developer e vuoi collaborare o dare dei 
 
 
 
-Dati aggiuntuvi: 
+Dati aggiuntivi: 
 Email per collab: brandosasso999@protonmail.com
                   brandosasso99@gmail.com
