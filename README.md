@@ -15,7 +15,7 @@ Note: This program already has base64 encoding, but full, proper encryption will
 
 3. GRAPHICAL USER INTERFACE (UI) IN TKINTER: I'm currently learning Tkinter so I can implement it in this program.
 
-4. ENGLISH VERSION OF THE PROGRAM: I will translate the program into English.
+4. ENGLISH VERSION OF THE PROGRAM: I will translate the program into English. DONE
 
 Note: This repo is public. If you're a developer and want to collaborate or give advice on the code or development, your help would be appreciated in making this project a better program!
 
