@@ -11,7 +11,7 @@ The following features will be added in upcoming updates:
 
 1. PASSWORD ENCRYPTION
 
-Note: This program already has base64 encoding, but full, proper encryption will be added in the future.
+Note: This program already has base64 encoding, but full, proper encryption will be added in the future. (sha256 or 512 coming soon)
 
 2. GRAPHICAL USER INTERFACE (UI) IN TKINTER: I'm currently learning Tkinter so I can implement it in this program.
 
