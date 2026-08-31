@@ -1,0 +1,4 @@
+To code, this program requires:
+cryptography 42.0
+Pyinstaller/pip
+PysIDE 6.6 (not necessary now, but in future yes)
