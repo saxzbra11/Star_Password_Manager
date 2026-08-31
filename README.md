@@ -23,7 +23,7 @@ Your password are secured by a **master password** too (thanks to V1.2)! Don't f
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Future Updates
-°The following features will be added in upcoming updates:*
+**The following features will be added in upcoming updates:**
 
 1. PASSWORD ENCRYPTION
 
