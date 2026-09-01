@@ -1,0 +1,36 @@
+# Generated files by the program
+master.json
+password.txt
+.master.json
+crash_log.txt
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Pyinstaller generated files
+build/
+dist/
+*.spec
+
+# Pythone cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE configurations files
+.vscode/
+.idea/
+*.code-workspace
+
+# Windows system files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Temp files
+*.log
+*.tmp
+*.bak
