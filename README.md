@@ -25,17 +25,15 @@ Your password are secured by a **master password** too (thanks to V1.2)! Don't f
 # Future Updates
 **The following features will be added in upcoming updates:**
 
-1. PASSWORD ENCRYPTION
+1. ~~**PASSWORD ENCRYPTION**~~ ✅ Done!
 
-Note: This program already has base64 encoding, but full, proper encryption will be added in the future. (sha256 or 512 coming soon)
+3. GRAPHICAL USER INTERFACE (UI) IN **PYSIDE6**: Switch of plans, for a more modern, simple and user friendly interface, i'll use Pyside6 for doing the ui of this project
 
-2. GRAPHICAL USER INTERFACE (UI) IN TKINTER: I'm currently learning Tkinter so I can implement it in this program.
-
-3. NEW ICON AND GRAPHICS OF THE REPO: A new banner and program icon will be released soon!
+4. NEW ICON AND GRAPHICS OF THE REPO: A new banner and program icon will be released soon!
 
 **Note:** This repo is public. If you're a developer and want to collaborate or give advice on the code or development, your help will be appreciated!
 _______________________________________________________________________________________________________________________________________________________________________
-Additional info:
+# Additional info:
 
 Email for collaboration: brandosasso999@protonmail.com / brandosasso99@gmail.com
 
