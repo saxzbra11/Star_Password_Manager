@@ -1,8 +1,9 @@
-# Questo è il codice di Star Password Manager, se stai leggendo questo, in questo codice torverai commenti facili da leggere, caoire e testare il codice a tuo piacimento. Buon lavoro!
-# ATTENZIONE: Questo programma è open source. E' possibile modificarlo e testarlo a proprio piacimennto, ma non è possibile commercializzarlo o rivenderlo senza il consenso dell'autore.
-#Per qualsiasi informazione, è possibile contattare l' autore tramite la mail messa appsoitamnete sulla pagina del progetto su Github.
 
-#STAR PASSWORD MANAGER V1.2
+#This is the code for Star Password Manager, if you're reading this, in this code you'll find a bunch of comments that explain how the program works.
+#You can modify it, but publish it on the development-test branch on github so the developer can see the changes
+#WARNING: This program is open source and free to use, don't commercalize it or sell it without the author's permission. To contact the author, ask question on the contact on the github repo
+
+#STAR PASSWORD MANAGER V1.3
 #-----------------------------------------------------------
 
 #Import list
@@ -24,6 +25,7 @@ ITERATIONS = 200_000
 HASH_ALGO = "sha256"
 SALT_BYTES = 16
 
+#Derive hash function (for master pasword), the password is generated with SALT_BYTES variable and the hash is generated with the hashlib.
 def _deriva_hash(password, salt):
     return hashlib.pbkdf2_hmac(HASH_ALGO, password.encode("utf-8"), salt, ITERATIONS)
  
@@ -54,21 +56,39 @@ def verificate_master_password():
     with open(MASTER_FILE, "r") as f:
         dati = json.load(f)
 
+# Load the stored salt and expected hash from the data file (hex -> bytes)
     salt = bytes.fromhex(dati["salt"])
     hash_salvato = bytes.fromhex(dati["hash"])
-
+# getpass hides input so the password isn't echoed to the terminal/logs
     while True:
         pwd = getpass("Enter the master password: ")
         hash_calcolato = _deriva_hash(pwd, salt)
-
+#Use constant-time comparison to prevent timing attacks 
         if hmac.compare_digest(hash_calcolato, hash_salvato):
             print("Access granted.\n")
+# Derive the actual encryption key from the verified password
             key = key_cryptography(pwd, salt)
             return create_fernet(key)
         print("Password incorrect, try again.\n")
 
 #-----------------------------------------------------------
-#FERNET ENCRYPTION AND DECRYPTION PART (finally)
+# Little secret, def variable to hide the json and .txt files in the APPDATA folder :D (ONLY ON WINDOWS) -i spent too much hours finding this and implement it, so pleeease don't touch it!
+#The json and txt can be found in the %APPDATA% folder on windows
+
+def get_data_dir():
+    if os.name == "nt":  # Windows save
+        base = os.getenv("APPDATA")
+    else:  # Linux/Mac save
+        base = os.path.expanduser("~/.config")
+    data_dir = os.path.join(base, "StarPasswordManager")
+    os.makedirs(data_dir, exist_ok=True)
+    return data_dir
+
+MASTER_FILE = os.path.join(get_data_dir(), "master.json")
+PASSWORD_FILE = os.path.join(get_data_dir(), "password.txt")
+#-----------------------------------------------------------
+
+#FERNET ENCRYPTION AND DECRYPTION PART (finally) based on AES 128 and sha256
 
 #Fernet encryption and decryption, the passwords will be saved on a .txt file with the name of the service and the encrypted password, it will decrypt the password when you search for it in the program.
 def cifra(testo, fernet):
@@ -84,15 +104,15 @@ def save_password(fernet):
     nome = input("Enter the name of the application: ")
     password = input("Enter the password: ")
     password_cifrata = cifra(password, fernet)
-    with open("password.txt", "a") as file:
+    with open(PASSWORD_FILE, "a") as file:
         file.write(nome + ":" + password_cifrata + "\n")
     print("The password has been saved!")
 
 def view_password(fernet):
     nome = input("Enter the name of the application to search for: ")
-    if os.path.exists("password.txt"):
+    if os.path.exists(PASSWORD_FILE):
         trovato = False
-        with open("password.txt", "r") as file:
+        with open(PASSWORD_FILE, "r") as file:
             for line in file:
                 if line.startswith(nome + ":"):
                     parti = line.split(":", 1)
@@ -103,11 +123,11 @@ def view_password(fernet):
             print("No password found for this name.")
     else:
         print("There are no passwords saved yet.")
-# List services function
 
+# List services function
 def lista_servizi():
-     if os.path.exists("password.txt"):
-        with open("password.txt", "r") as file:
+     if os.path.exists(PASSWORD_FILE):
+        with open(PASSWORD_FILE, "r") as file:
             servizi = [line.split(":", 1)[0] for line in file if line.strip()]
         if servizi:
             print("Servizi salvati:")
@@ -154,7 +174,7 @@ ASCII_ART = r"""
 
 def main(fernet):
     print("*****************************************")
-    print("    STAR PASSWORD MANAGER V1.3 BETA      ")
+    print("    STAR PASSWORD MANAGER V1.3     ")
     print("*****************************************")
     print(ASCII_ART)
 
@@ -170,13 +190,13 @@ def main(fernet):
 
     #Cancellation (3)
     elif choice == "3":
-        if os.path.exists("password.txt"):
+        if os.path.exists(PASSWORD_FILE):
             nome = input("Enter the name of the service containing the password to delete: ")
-            with open("password.txt", "r") as file:
+            with open(PASSWORD_FILE, "r") as file:
                 lines = file.readlines()
             
             found = False
-            with open("password.txt", "w") as file:
+            with open(PASSWORD_FILE, "w") as file:
                 for line in lines:
                     if not line.startswith(nome + ":"):
                         file.write(line)
@@ -193,7 +213,7 @@ def main(fernet):
         lista_servizi()
 
     #Invalid choice
-    if ("password.txt") and (choice != "1") and (choice != "2") and (choice != "3") and (choice != "4"):
+    if (os.path.exists(PASSWORD_FILE)) and (choice != "1") and (choice != "2") and (choice != "3") and (choice != "4"):
         print("Invalid choice!")
 
 #-----------------------------------------------------------
@@ -214,4 +234,4 @@ if __name__ == "__main__":
 #If you want to contact the author, you can find contact information on the repo's page on github.
 #This program has a MIT license, as the github repo says.
 
-#Last update: 28/08/2026 (Update the date if you modify it!)
+#Last update: 07/09/2026 (Update the date if you modify it!)
