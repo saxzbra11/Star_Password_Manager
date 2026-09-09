@@ -5,7 +5,7 @@ A simple password manager to manage all your passwords! No ads, no cloud saving,
 <img width="800" height="120" alt="Senza titolo-1" src="https://github.com/user-attachments/assets/deb4a8f2-1387-471c-8c62-ab85527eee3f" />
 
 
-**WARNING**: For now, encrypted password are saved on a .txt file, hide of the txt will be added with future release.
+**WARNING**: For now, encrypted password are saved on a .txt file, hide of the txt will be added with future release (Files saved in %APPDATA% folder thanks to 1.3)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Star Password Manager is a password manager written entirely on python and local save only!
