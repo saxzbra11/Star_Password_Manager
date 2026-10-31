@@ -1,11 +1,11 @@
 # Star Password Manager
-A simple password manager to manage all your passwords! No ads, no cloud saving, all saved on your PC!
+A simple password manager to manage all your passwords! No ads, no cloud saving, all saved on your PC! And it's completely **Open Source!**
+
 
 
 <img width="800" height="120" alt="Senza titolo-1" src="https://github.com/user-attachments/assets/deb4a8f2-1387-471c-8c62-ab85527eee3f" />
 
 
-**WARNING**: For now, encrypted password are saved on a .txt file, hide of the txt will be added with future release (Files saved in %APPDATA% folder thanks to 1.3)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Star Password Manager is a password manager written entirely on python and local save only!
@@ -22,19 +22,23 @@ In the program you can:
 Your password are secured by a **master password** too (thanks to V1.2)! Don't forget it after you put it!!
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Future Updates
+# Future Updates Roadmap
 **The following features will be added in upcoming updates:**
 
-1. ~~**PASSWORD ENCRYPTION**~~ ✅ Done!
+**1. ~~**PASSWORD ENCRYPTION**~~** ✅ Done!
 
-3. GRAPHICAL USER INTERFACE (UI) IN **PYSIDE6**: Switch of plans, for a more modern, simple and user friendly interface, i'll use Pyside6 for doing the ui of this project
+**2. GRAPHICAL USER INTERFACE (UI) IN PYSIDE6**: Switch of plans, for a more modern, simple and user friendly interface, i'll use Pyside6 for doing the ui of this project
 
-4. NEW ICON AND GRAPHICS OF THE REPO: A new banner and program icon will be released soon!
+**3. NEW ICON AND GRAPHICS OF THE REPO:** A new banner and program icon will be released soon!
 
-**Note:** This repo is public. If you're a developer and want to collaborate or give advice on the code or development, your help will be appreciated!
+**4. LIVE SERVICE RESEARCH:** For example, if you type ama, the program search a service that starts or have this letters in the name (in this case, it can be amazon)
+
+**Note:** This repo is public and the project is **open source**. If you're a developer and want to collaborate or give advice on the code or development, your help will be appreciated!✨
 _______________________________________________________________________________________________________________________________________________________________________
 # Additional info:
 
-Email for collaboration: brandosasso999@protonmail.com / brandosasso99@gmail.com
+**Email for collaboration:** brandosasso999@protonmail.com / brandosasso99@gmail.com
 
-discord: saxzbra_16
+**Discord:** saxzbra_16
+
+**Website:** https://brandosasso.me/
