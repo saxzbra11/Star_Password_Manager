@@ -3,7 +3,9 @@ A simple password manager to manage all your passwords! No ads, no cloud saving,
 
 
 
-<img width="800" height="120" alt="Senza titolo-1" src="https://github.com/user-attachments/assets/deb4a8f2-1387-471c-8c62-ab85527eee3f" />
+
+<img width="800" height="120" alt="Senza titolo-1" src="https://github.com/user-attachments/assets/c8982813-820d-4f44-a77d-9b3e4e0b419d" />
+
 
 
 
@@ -25,11 +27,11 @@ Your password are secured by a **master password** too (thanks to V1.2)! Don't f
 # Future Updates Roadmap
 **The following features will be added in upcoming updates:**
 
-**1. ~~**PASSWORD ENCRYPTION**~~** ✅ Done!
+~~**1.PASSWORD ENCRYPTION**~~ ✅ Done!
 
 **2. GRAPHICAL USER INTERFACE (UI) IN PYSIDE6**: Switch of plans, for a more modern, simple and user friendly interface, i'll use Pyside6 for doing the ui of this project
 
-**3. NEW ICON AND GRAPHICS OF THE REPO:** A new banner and program icon will be released soon!
+~~**3. NEW ICON AND GRAPHICS OF THE REPO:**~~ ✅ Done!
 
 **4. LIVE SERVICE RESEARCH:** For example, if you type ama, the program search a service that starts or have this letters in the name (in this case, it can be amazon)
 
